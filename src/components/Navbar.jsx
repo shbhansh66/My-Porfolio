@@ -1,4 +1,5 @@
 import { useState } from "react";
+import actual_img from '../assets/logo.png'
 const Navbar = ({ theme, toggleTheme }) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -12,16 +13,16 @@ const Navbar = ({ theme, toggleTheme }) => {
 
     return (
         <nav className="fixed w-full z-30 top-0 
-                        bg-gray-900 bg-opacity-90 dark:bg-white dark:bg-opacity-95 
-                        backdrop-blur-md shadow-lg transition-all duration-300">
+                        bg-gray-900 bg-opacity-90 dark:bg-gray-900 dark:bg-opacity-95 
+                        backdrop-blur-md  transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     
                     {/* Logo/Name */}
                     <a href="#hero" className="flex-shrink-0 text-xl font-bold 
                                               text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400
-                                              dark:from-blue-600 dark:to-cyan-600">
-                        [Your Name]
+                                              dark:from-blue-600 dark:to-cyan-600 w-12 h-12">
+                        <img src={actual_img} alt="" />
                     </a>
 
                     {/* Desktop Navigation Links and Theme Toggle */}

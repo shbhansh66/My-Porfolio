@@ -1,21 +1,20 @@
 import AnimatedText from './AnimatedText.jsx'
-import actualLogo from '../assets/profile.jpg';
+import actualimg from '../assets/profile.jpg';
 import { useState,useEffect ,useCallback} from 'react';
 
 // --- 1. HERO COMPONENT LOGIC ---
 const particles = [
-    // { icon: '⚛️', color: 'text-blue-400', depth: 3, size: 'w-10 h-10', position: 'top-1/4 left-1/4' }, // React
-    // { icon: '🟢', color: 'text-green-500', depth: 2, size: 'w-16 h-16', position: 'top-1/2 right-1/4' }, // Node
-    // { icon: '🍃', color: 'text-cyan-500', depth: 4, size: 'w-12 h-12', position: 'bottom-1/4 left-1/2' }, // MongoDB
-    // { icon: '💨', color: 'text-purple-400', depth: 1, size: 'w-14 h-14', position: 'top-10 right-10' }, // Express
-    // { icon: '🛠️', color: 'text-yellow-400', depth: 5, size: 'w-8 h-8', position: 'bottom-20 left-10' }, // Tools
+    { icon: '⚛️', color: 'text-blue-400', depth: 3, size: 'w-10 h-10', position: 'top-1/4 left-1/4' }, // React
+    { icon: '🟢', color: 'text-green-500', depth: 2, size: 'w-16 h-16', position: 'top-1/2 right-1/4' }, // Node
+    { icon: '🍃', color: 'text-cyan-500', depth: 4, size: 'w-12 h-12', position: 'bottom-1/4 left-1/2' }, // MongoDB
+    { icon: '💨', color: 'text-purple-400', depth: 1, size: 'w-14 h-14', position: 'top-10 right-10' }, // Express
+    { icon: '🛠️', color: 'text-yellow-400', depth: 5, size: 'w-8 h-8', position: 'bottom-20 left-10' }, // Tools
 
     
   { icon: '💻', color: 'text-blue-300', depth: 3, size: 'w-12 h-12', position: 'top-1/2 left-1/4' }, // Programming
   { icon: '⚙️', color: 'text-gray-300', depth: 2, size: 'w-16 h-16', position: 'top-1/2 right-1/4' }, // DSA & Logic
   { icon: '🌐', color: 'text-green-400', depth: 4, size: 'w-12 h-12', position: 'bottom-1/2 left-1/2' }, // Web Development
-  { icon: '🧱', color: 'text-purple-400', depth: 1, size: 'w-14 h-14', position: 'top-10 right-10' }, // System Design
-  { icon: '🛠️', color: 'text-yellow-400', depth: 5, size: 'w-8 h-8', position: 'bottom-20 left-10' }, // Debugging / Tools
+  
 
   { icon: '🔐', color: 'text-red-400', depth: 3, size: 'w-10 h-10', position: 'top-16 left-1/3' }, // Security & Authentication
   { icon: '🗄️', color: 'text-cyan-400', depth: 4, size: 'w-14 h-14', position: 'top-1/3 right-12' }, // Database & Queries
@@ -73,7 +72,7 @@ const Hero = () => {
       id="hero" 
       className="min-h-screen flex items-center justify-center 
                  bg-gray-900 dark:bg-gray-900
-                 text-white dark:text-white-900 p-4 sm:p-6 lg:p-8 relative overflow-hidden pt-16 perspective-1000 mt-10" // Added pt-16 offset + perspective
+                 text-white dark:text-white-900 p-10 sm:p-6 lg:p-8 relative overflow-hidden pt-16 perspective-1000 mt-10" // Added pt-16 offset + perspective
     >
       
       {/* 1. Interactive Parallax Particles */}
@@ -98,10 +97,10 @@ const Hero = () => {
         {/* Profile Image - Theme-aware border */}
         <div className="mb-8 mt-[-100px] sm:mt-[-120px] flex justify-center animate-zoom-in">
           <img 
-            src={actualLogo} // Placeholder image for safety
+            src={actualimg} // Placeholder image for safety
             alt="Your Profile" 
             className="w-48 h-48 rounded-full object-cover border-4 border-blue-400 dark:border-blue-600 shadow-xl"
-            onError={(e) => { e.target.onerror = null; e.target.src=''; }} // Fallback
+            onError={(e) => { e.target.onerror = null; e.target.src={actualimg} }} // Fallback
           />
         </div>
         

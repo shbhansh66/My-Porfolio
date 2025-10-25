@@ -9,7 +9,7 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 function App() {
   return (
-    <div className="text-white App min-h-screen bg-gray-950 font-sans">
+    <div className="text-white App min-h-screen bg-gray-900 font-sans">
       
       <Navbar />
       <Hero />
